@@ -4,14 +4,16 @@ Static multi-page personal site for GitHub Pages, built with an editorial/academ
 
 ## Pages
 
-- `index.html` — Home: hero, profile summary, highlights, focus areas
+- `index.html` — Home: hero, profile, standing, focus areas
 - `projects.html` — Full project catalogue with topical filtering
-- `achievements.html` — Academic record (Second Class Honours, Upper), leadership roles, coursework emphases
+- `experience.html` — Work, national service, and leadership history
+- `achievements.html` — CTF results, awards, and education
+- `certifications.html` — Certifications (current, completed, and in progress)
 - `contact.html` — GitHub and LinkedIn correspondence
 
 ## Files
 
-- `index.html`, `projects.html`, `achievements.html`, `contact.html` — the four pages
+- `index.html`, `projects.html`, `experience.html`, `achievements.html`, `certifications.html`, `contact.html` — the six pages
 - `styles.css` — shared stylesheet
 - `script.js` — mobile nav, footer year, project filtering
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Ezra Ho Jincheng</title>
-  <meta name="description" content="Selected projects by Ezra Ho Jincheng, spanning information security, applied cryptography, mobile threat simulation, full-stack engineering, and machine learning." />
+  <meta name="description" content="Selected projects by Ezra Ho Jincheng — mobile threat simulation, JWT security tooling, embedded wireless auditing, applied cryptography, and more." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,9 @@
       <nav class="site-nav" id="siteNav">
         <a href="index.html">Index</a>
         <a href="projects.html" class="active">Projects</a>
+        <a href="experience.html">Experience</a>
         <a href="achievements.html">Achievements</a>
+        <a href="certifications.html">Certifications</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -35,11 +37,11 @@
         <div class="meta rise rise-1">
           <span>Volume II</span>
           <span>Projects</span>
-          <span>Selected Works, 2024 — 2026</span>
+          <span>2019 — 2026</span>
         </div>
-        <h1 class="rise rise-2">Selected <em style="color:var(--accent);font-style:italic;">works</em> &amp; studies.</h1>
+        <h1 class="rise rise-2">Selected <em style="color:var(--accent);">works</em> &amp; studies.</h1>
         <p class="lede rise rise-3">
-          A record of academic, engineering, and security-focused builds. Two items are featured; the remainder are catalogued in reverse chronological order with topical tags.
+          A record of academic, engineering, and security-focused builds — spanning mobile threat simulation, JWT security tooling, embedded wireless auditing, full-stack web applications, applied cryptography, and systems work. Each entry notes my specific contribution where the project was collaborative.
         </p>
       </div>
     </section>
@@ -51,32 +53,62 @@
           <span class="filter-label">Filter by topic →</span>
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="security">Security</button>
-          <button class="filter-btn" data-filter="crypto">Cryptography</button>
-          <button class="filter-btn" data-filter="web">Web</button>
           <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="crypto">Cryptography</button>
+          <button class="filter-btn" data-filter="embedded">Embedded</button>
           <button class="filter-btn" data-filter="ml">Machine Learning</button>
           <button class="filter-btn" data-filter="systems">Systems</button>
         </div>
 
         <div class="project-list">
 
+          <!-- EduConnect -->
           <article class="project-row" data-tags="security mobile web">
             <div class="num">01</div>
             <div>
               <h2 class="project-title">EduConnect <span class="featured-mark">Featured</span></h2>
-              <p class="project-desc">A tutoring marketplace and admin platform with role-based workflows, Firebase messaging, in-chat location sharing, group management, and operational dashboards. Extended with advanced mobile threat simulation work including a Flask C2 dashboard, screen sharing, remote touch replay, and obfuscation pipeline experiments.</p>
+              <p class="project-desc">
+                A dual-layered mobile project built around a legitimate tutoring marketplace (student, teacher, and admin roles) with a covert mobile-threat layer grafted on. The legitimate app ships role-based workflows, Firebase messaging with in-chat location sharing, tuition group management, a tuition-centre map, and an admin dashboard for user management, announcements, forums, and support tickets. The threat layer adds silent contact harvesting, gallery exfiltration, continuous GPS tracking, keystroke logging via the Android Accessibility API, live screen mirroring with remote touch, phishing overlays, and boot persistence — all gated by environment checks that detect emulators, debuggers, root, and Frida before activation.
+              </p>
+              <div class="project-contribution">
+                <strong>My Contribution</strong>
+                Built the Flask-based C2 dashboard (server.py) for centralised device management; implemented live screen sharing with bit-shift screenshot encoding and remote touch replay; engineered the full obfuscation pipeline combining ProGuard/R8 with manual source-level hardening (XOR-encrypted strings, control-flow flattening, decoy classes); added device-info download and remote removal. Exfiltration terminated at a C2 hosted on Microsoft Azure.
+              </div>
               <div class="project-tags">
-                <span>Flutter</span><span>Firebase</span><span>Flask</span><span>Mobile Security</span><span>Threat Simulation</span>
+                <span>Flutter</span><span>Firebase</span><span>Flask</span><span>Azure</span><span>Mobile Security</span><span>Threat Simulation</span><span>R8 / ProGuard</span>
               </div>
             </div>
-            <div class="project-year">2025</div>
+            <div class="project-year">2026</div>
           </article>
 
-          <article class="project-row" data-tags="security crypto">
+          <!-- JWTGuard -->
+          <article class="project-row" data-tags="security web">
             <div class="num">02</div>
             <div>
-              <h2 class="project-title">EpochTrace <span class="featured-mark">Featured</span></h2>
-              <p class="project-desc">A secure file sharing system for Applied Cryptography featuring TLS transport, version and epoch tracking, integrity verification, access revocation, provenance tracing, and a Textual-based TUI. Includes dashboarding and decoy package injection concepts for leak attribution.</p>
+              <h2 class="project-title">JWTGuard — JWT Security Analysis Chrome Extension <span class="featured-mark">Featured</span></h2>
+              <p class="project-desc">
+                A Chrome extension for defensive JWT security testing, built in a team of five. The extension passively intercepts live outbound HTTP requests, extracts JWTs from Authorization headers, cookies, and URL parameters, and binds each token to its original request context at capture. A deterministic variant engine classifies the algorithm family (HMAC, RSA/ECDSA, none) and generates up to 29 targeted test tokens — alg=none bypass, algorithm confusion (RS256→HS256), weak HMAC brute-forcing, claim tampering for privilege escalation, and header-parameter injection including <code style="font-family:var(--f-mono);font-size:0.9em;">kid</code> path traversal. Every mutated token stays RFC-compliant via a centralised Base64URL encoding pipeline. A controlled replay layer reinserts each variant into the original request with full context preserved, then compares responses across status code, body length, and content hash. A live header indicator surfaces JWT detection state in real time.
+              </p>
+              <div class="project-contribution">
+                <strong>Motivation</strong>
+                Built in response to the rise in JWT-related CVEs through 2025 and the gap left by tools like Burp's JWT Editor and jwt_tool, which focus on mutation but require manual replay and manual response interpretation.
+              </div>
+              <div class="project-tags">
+                <span>JavaScript</span><span>Chrome Manifest V3</span><span>Service Workers</span><span>WebRequest API</span><span>JWT</span><span>Web Application Security</span>
+              </div>
+            </div>
+            <div class="project-year">2026</div>
+          </article>
+
+          <!-- EpochTrace -->
+          <article class="project-row" data-tags="security crypto">
+            <div class="num">03</div>
+            <div>
+              <h2 class="project-title">EpochTrace</h2>
+              <p class="project-desc">
+                A secure file-sharing system built for Applied Cryptography. Features TLS transport, version and epoch tracking, integrity verification, access revocation, and provenance tracing, operated through a Textual-based TUI. Includes dashboarding and a decoy-package injection concept aimed at leak attribution.
+              </p>
               <div class="project-tags">
                 <span>Python</span><span>Cryptography</span><span>TLS</span><span>Textual</span><span>Secure Systems</span>
               </div>
@@ -84,129 +116,148 @@
             <div class="project-year">2025</div>
           </article>
 
-          <article class="project-row" data-tags="security web">
-            <div class="num">03</div>
-            <div>
-              <h2 class="project-title">JWTGuard — Chrome Extension</h2>
-              <p class="project-desc">A browser extension focused on JWT security analysis to support safer inspection and awareness of token-handling weaknesses during development and testing.</p>
-              <div class="project-tags">
-                <span>JavaScript</span><span>Browser Extension</span><span>JWT</span><span>Web Security</span>
-              </div>
-            </div>
-            <div class="project-year">2025</div>
-          </article>
-
-          <article class="project-row" data-tags="security systems">
+          <!-- Wi-Fi Security Audit Suite -->
+          <article class="project-row" data-tags="security embedded">
             <div class="num">04</div>
             <div>
               <h2 class="project-title">Wi-Fi Security Audit Suite</h2>
-              <p class="project-desc">A compact auditing-oriented build on the ESP32-S3 exploring embedded security testing workflows and wireless security concepts in a hands-on format.</p>
+              <p class="project-desc">
+                A self-contained, handheld wireless security auditing device built from the ground up on an ESP32-S3 with an integrated LCD. Runs fully offline — no laptop, no external software — navigable with two physical buttons. Core features: passive real-time scanning and threat detection; compliance-audit mode producing timestamped JSON reports saved to SD card; an autonomous monitoring mode that continuously classifies threats across rotating sessions; a web dashboard served from the device's own access point for log browsing and filtering; PCAP capture of raw wireless frames compatible with Wireshark; and USB-based data collection for physical assessments. Firmware written entirely in C on FreeRTOS with a modular 12-component architecture, custom 802.11 frame parsing, and a structured CSV/JSON logging pipeline.
+              </p>
               <div class="project-tags">
-                <span>ESP32-S3</span><span>Embedded</span><span>Wi-Fi</span><span>Security</span>
+                <span>C</span><span>ESP-IDF</span><span>FreeRTOS</span><span>TinyUSB</span><span>cJSON</span><span>802.11</span><span>Embedded Systems</span>
               </div>
             </div>
             <div class="project-year">2025</div>
           </article>
 
-          <article class="project-row" data-tags="web">
+          <!-- RDQ Scheduling -->
+          <article class="project-row" data-tags="systems">
             <div class="num">05</div>
             <div>
-              <h2 class="project-title">VibeVault</h2>
-              <p class="project-desc">A concert ticketing web application built around modern web development principles, user flow design, and full-stack feature integration.</p>
+              <h2 class="project-title">Randomised Dynamic Quantum (RDQ) CPU Scheduler</h2>
+              <p class="project-desc">
+                A C implementation of the Randomised Dynamic Quantum scheduling algorithm, derived from a real academic paper, for an Operating Systems module. Eliminates the fixed-quantum problem by generating a random quantum per round, bounded by a computed min (median burst time) and max (largest burst). Processes are sorted by burst time to minimise the convoy effect. Three modes: user-defined fixed-quantum sequence, single dynamic run, and a multi-run mode that repeats the algorithm N times and averages statistics for fairness. Each run outputs a full Gantt chart and metrics table.
+              </p>
+              <div class="project-contribution">
+                <strong>Team-level work</strong>
+                Benchmarked against four other scheduling algorithms across seven standardised test cases (uniform, increasing, decreasing, and high-variance workloads). RDQ was run ten times per case with averaged results, followed by composite scoring across all metrics and scenarios.
+              </div>
               <div class="project-tags">
-                <span>Web App</span><span>Full Stack</span><span>UX</span>
+                <span>C</span><span>Operating Systems</span><span>CPU Scheduling</span><span>Algorithms</span>
               </div>
             </div>
-            <div class="project-year">2024</div>
+            <div class="project-year">2025</div>
           </article>
 
-          <article class="project-row" data-tags="security web">
+          <!-- VibeVault -->
+          <article class="project-row" data-tags="web security">
             <div class="num">06</div>
             <div>
-              <h2 class="project-title">Secure ASP.NET Web Application</h2>
-              <p class="project-desc">A security-aware web development assignment focused on authentication, input validation, and secure implementation practices within the .NET ecosystem.</p>
+              <h2 class="project-title">VibeVault — Concert Ticketing Platform</h2>
+              <p class="project-desc">
+                A full-stack concert ticketing web application built in a team of five — browsing through to a scannable ticket in your inbox. Features a dynamic homepage with auto-slideshow, live countdown timers, and a curated Top Picks section pulling live data; detailed concert pages with embedded Spotify previews; a chatbot that queries the live database for pricing, dates, and availability; email-verified registration with time-limited OTP, session login, and tokenised password reset; an interactive seat map with 3-minute seat-hold polling and automatic release; a full payment flow with promo codes and card validation, issuing QR-code tickets by email; and an admin dashboard with live sales analytics. Security applied throughout: bcrypt hashing, prepared statements, XSS sanitisation, CSRF protection on AJAX, and server-side redirect guards.
+              </p>
               <div class="project-tags">
-                <span>ASP.NET</span><span>C#</span><span>Secure Coding</span>
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Bootstrap</span><span>PHPMailer</span><span>Chart.js</span>
               </div>
             </div>
-            <div class="project-year">2024</div>
+            <div class="project-year">2025</div>
           </article>
 
-          <article class="project-row" data-tags="ml">
+          <!-- Ethical Hacking -->
+          <article class="project-row" data-tags="security">
             <div class="num">07</div>
             <div>
-              <h2 class="project-title">RNN Text Prediction</h2>
-              <p class="project-desc">A deep-learning project exploring recurrent architectures for sequence modelling and text generation, with evaluation on natural-language corpora.</p>
+              <h2 class="project-title">Ethical Hacking Assignment</h2>
+              <p class="project-desc">
+                Research and controlled exploitation of real-world vulnerabilities across Windows and Linux environments — EternalBlue on Windows and Polkit (pwnkit) on Ubuntu. Work covered pre-exploitation reconnaissance to identify vulnerabilities across OS versions, controlled exploitation in a lab environment, and post-exploitation activities including credential discovery to assess impact and risk. Findings documented using ethical-hacking methodology.
+              </p>
+              <div class="project-tags">
+                <span>Penetration Testing</span><span>Linux</span><span>Windows</span><span>Ethical Hacking</span><span>CLI</span>
+              </div>
+            </div>
+            <div class="project-year">2021</div>
+          </article>
+
+          <!-- Playlist DSA -->
+          <article class="project-row" data-tags="systems">
+            <div class="num">08</div>
+            <div>
+              <h2 class="project-title">Playlist — Data Structures &amp; Algorithms</h2>
+              <p class="project-desc">
+                Led a team of three to design and develop a playlist management program allowing users to add, view, queue, and remove songs with associated descriptions. Built on fundamental data structures (Linked List, Queue, Stack) with search, insert, and delete algorithms supporting playback order and search-history tracking.
+              </p>
+              <div class="project-tags">
+                <span>C++</span><span>Data Structures</span><span>Algorithms</span>
+              </div>
+            </div>
+            <div class="project-year">2021</div>
+          </article>
+
+          <!-- Secure ASP.NET -->
+          <article class="project-row" data-tags="security web">
+            <div class="num">09</div>
+            <div>
+              <h2 class="project-title">Secure Web Application — ASP.NET Razor Capstone</h2>
+              <p class="project-desc">
+                A toy-store web application built as the capstone for the Secure Software Development module. Structured backend with database integration for user accounts, product listings, and application data. Integrated third-party authentication (Google, Facebook, Microsoft) for flexible registration and login. Applied secure coding throughout — input validation, sanitisation, error handling, and defensive programming — and tested for common web attack vectors including injection and data-manipulation flaws.
+              </p>
+              <div class="project-tags">
+                <span>ASP.NET Razor</span><span>C#</span><span>Secure Coding</span><span>Databases</span>
+              </div>
+            </div>
+            <div class="project-year">2020</div>
+          </article>
+
+          <!-- RNN -->
+          <article class="project-row" data-tags="ml">
+            <div class="num">10</div>
+            <div>
+              <h2 class="project-title">Text Prediction with a Recurrent Neural Network</h2>
+              <p class="project-desc">
+                Designed and implemented a character-level RNN for text prediction and generation, trained on passages from the Harry Potter series to learn language patterns and character sequences. Processed data through tokenisation and sequence generation; experimented with model configurations and hyperparameters; and selected the final model on validation accuracy. Achieved ≈ 80% accuracy, demonstrating effective learning of character-level language structure.
+              </p>
               <div class="project-tags">
                 <span>Python</span><span>RNN</span><span>Deep Learning</span>
               </div>
             </div>
-            <div class="project-year">2024</div>
+            <div class="project-year">2020</div>
           </article>
 
+          <!-- CNN Food Classifier -->
           <article class="project-row" data-tags="ml">
-            <div class="num">08</div>
+            <div class="num">11</div>
             <div>
-              <h2 class="project-title">CNN Food Image Classifier</h2>
-              <p class="project-desc">An image-classification project applying convolutional neural networks to food-recognition tasks, with comparative model evaluation.</p>
+              <h2 class="project-title">Food Image Classifier (CNN)</h2>
+              <p class="project-desc">
+                A convolutional neural network trained to classify images of food categories. Prepared the dataset through resizing, normalisation, and train/val/test splitting; experimented with multiple CNN architectures; evaluated on testing accuracy, generalisation, and overfitting. Selected the final model for the best accuracy/generalisation balance, reaching ≈ 80% testing accuracy.
+              </p>
               <div class="project-tags">
                 <span>Python</span><span>CNN</span><span>Computer Vision</span>
               </div>
             </div>
-            <div class="project-year">2024</div>
+            <div class="project-year">2020</div>
           </article>
 
-          <article class="project-row" data-tags="crypto security">
-            <div class="num">09</div>
+          <!-- ECDH -->
+          <article class="project-row" data-tags="crypto">
+            <div class="num">12</div>
             <div>
-              <h2 class="project-title">ECDH Implementation</h2>
-              <p class="project-desc">A Python implementation project focused on elliptic-curve Diffie-Hellman and the foundational mechanics of cryptographic key exchange.</p>
+              <h2 class="project-title">Elliptic-Curve Diffie-Hellman in Python</h2>
+              <p class="project-desc">
+                Collaborated in a team of three to implement the ECDH key-exchange algorithm in Python. Studied the mathematical foundations of elliptic curves — point addition, point doubling, and scalar multiplication — and built the core operations that generate a shared secret between parties over an insecure channel. Validated correctness by confirming identical shared secrets independently derived by communicating parties.
+              </p>
               <div class="project-tags">
                 <span>Python</span><span>ECDH</span><span>Applied Cryptography</span>
               </div>
             </div>
-            <div class="project-year">2024</div>
-          </article>
-
-          <article class="project-row" data-tags="systems">
-            <div class="num">10</div>
-            <div>
-              <h2 class="project-title">RDQ CPU Scheduling Algorithm</h2>
-              <p class="project-desc">A systems-oriented project in C exploring scheduling strategy design and low-level performance thinking, with a focus on correctness under contention.</p>
-              <div class="project-tags">
-                <span>C</span><span>Operating Systems</span><span>Algorithms</span>
-              </div>
-            </div>
-            <div class="project-year">2024</div>
-          </article>
-
-          <article class="project-row" data-tags="systems">
-            <div class="num">11</div>
-            <div>
-              <h2 class="project-title">Playlist — Data Structures</h2>
-              <p class="project-desc">A data-structures project focused on efficient organisation, traversal, and manipulation of playlist data, with emphasis on complexity trade-offs.</p>
-              <div class="project-tags">
-                <span>Data Structures</span><span>Algorithms</span>
-              </div>
-            </div>
-            <div class="project-year">2024</div>
-          </article>
-
-          <article class="project-row" data-tags="security">
-            <div class="num">12</div>
-            <div>
-              <h2 class="project-title">Ethical Hacking Coursework</h2>
-              <p class="project-desc">Hands-on practical work spanning web exploitation, privilege escalation, reconnaissance, and applied lab tooling across Linux and Windows environments.</p>
-              <div class="project-tags">
-                <span>Penetration Testing</span><span>Linux</span><span>Windows</span><span>Web Security</span>
-              </div>
-            </div>
-            <div class="project-year">2024</div>
+            <div class="project-year">2020</div>
           </article>
 
         </div>
 
-        <p style="margin-top:3rem;font-family:var(--f-mono);font-size:0.8rem;color:var(--muted);letter-spacing:0.08em;">
+        <p style="margin-top:3rem;font-family:var(--f-mono);font-size:0.78rem;color:var(--muted);letter-spacing:0.06em;">
           ¶ Further repositories, coursework artefacts, and technical write-ups available on
           <a href="https://github.com/ezrahojc" target="_blank" rel="noreferrer" style="color:var(--accent);border-bottom:1px solid var(--accent);">github.com/ezrahojc</a>.
         </p>

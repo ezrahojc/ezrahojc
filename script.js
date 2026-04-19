@@ -19,7 +19,6 @@
     toggle.textContent = nav.classList.contains('open') ? 'CLOSE' : 'MENU';
   });
 
-  // Close nav when a link is clicked (useful on mobile)
   nav.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () {
       nav.classList.remove('open');
@@ -45,7 +44,6 @@
         var tags = (row.getAttribute('data-tags') || '').split(' ');
         if (filter === 'all' || tags.indexOf(filter) !== -1) {
           row.style.display = '';
-          // re-trigger a subtle fade
           row.style.opacity = '0';
           requestAnimationFrame(function () {
             row.style.transition = 'opacity 0.3s ease';
