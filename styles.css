@@ -1,14 +1,14 @@
 :root {
-  --bg: #060805;
-  --bg-soft: #0d110c;
-  --panel: rgba(17, 22, 16, 0.88);
-  --panel-strong: #151b14;
-  --text: #eef2e8;
-  --muted: #aab39d;
-  --line: rgba(181, 194, 154, 0.12);
-  --accent: #8a9a5b;
-  --accent-strong: #a3b86c;
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+  --bg: #050505;
+  --bg-soft: #0b0b0b;
+  --panel: rgba(14, 14, 14, 0.92);
+  --panel-strong: #121212;
+  --text: #f5f5f5;
+  --muted: #b8b8b8;
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #ffffff;
+  --accent-strong: #d9d9d9;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
   --radius: 22px;
   --radius-sm: 14px;
   --max: 1180px;
@@ -26,9 +26,9 @@ body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(138, 154, 91, 0.14), transparent 24%),
-    radial-gradient(circle at top right, rgba(163, 184, 108, 0.08), transparent 22%),
-    linear-gradient(180deg, #050704 0%, #090d08 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 24%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent 22%),
+    linear-gradient(180deg, #020202 0%, #080808 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -47,8 +47,8 @@ img {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(14px);
-  background: rgba(27, 37, 20, 0.92);
-  border-bottom: 1px solid rgba(163, 184, 108, 0.2);
+  background: rgba(0, 0, 0, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nav-wrap,
@@ -75,10 +75,10 @@ img {
   height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #081005;
+  color: #000000;
   text-decoration: none;
   font-weight: 800;
-  box-shadow: 0 0 24px rgba(138, 154, 91, 0.25);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.08);
 }
 
 .site-nav {
@@ -103,7 +103,7 @@ img {
 }
 
 .site-nav a:hover {
-  color: var(--accent-strong);
+  color: var(--accent);
 }
 
 .hero,
@@ -200,8 +200,8 @@ h3 {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #081005;
-  box-shadow: 0 8px 24px rgba(138, 154, 91, 0.22);
+  color: #000000;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
 }
 
 .btn-secondary {
@@ -233,8 +233,8 @@ h3 {
   place-items: center;
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, rgba(138, 154, 91, 0.24), rgba(163, 184, 108, 0.1));
-  border: 1px solid rgba(163, 184, 108, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 1.25rem;
 }
 
@@ -300,9 +300,9 @@ h3 {
 
 .badge {
   margin-bottom: 1rem;
-  background: rgba(138, 154, 91, 0.14);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--accent-strong);
-  border: 1px solid rgba(163, 184, 108, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .tags {
@@ -341,9 +341,9 @@ h3 {
   letter-spacing: 0.06em;
   color: rgba(255,255,255,0.92);
   background:
-    linear-gradient(135deg, rgba(138, 154, 91, 0.2), rgba(163, 184, 108, 0.08)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05)),
     linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-  border: 1px solid rgba(163, 184, 108, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .contact-card {
