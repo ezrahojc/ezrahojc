@@ -1,20 +1,60 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+// ============================================================
+// Ezra Ho Jincheng — Portfolio site interactions
+// ============================================================
 
-const navLinks = document.querySelectorAll('.site-nav a');
-const sections = [...navLinks].map((link) => document.querySelector(link.getAttribute('href')));
+// Footer year
+(function () {
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
 
-const setActiveLink = () => {
-  const current = sections.find((section) => {
-    if (!section) return false;
-    const rect = section.getBoundingClientRect();
-    return rect.top <= 120 && rect.bottom >= 120;
+// Mobile nav toggle
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('siteNav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('open');
+    toggle.textContent = nav.classList.contains('open') ? 'CLOSE' : 'MENU';
   });
 
-  navLinks.forEach((link) => {
-    const matches = current && link.getAttribute('href') === `#${current.id}`;
-    link.style.color = matches ? 'var(--text)' : 'var(--muted)';
+  // Close nav when a link is clicked (useful on mobile)
+  nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('open');
+      toggle.textContent = 'MENU';
+    });
   });
-};
+})();
 
-window.addEventListener('scroll', setActiveLink);
-window.addEventListener('load', setActiveLink);
+// Project filtering (only runs on projects page)
+(function () {
+  var buttons = document.querySelectorAll('.filter-btn');
+  var rows = document.querySelectorAll('.project-row');
+  if (!buttons.length || !rows.length) return;
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var filter = btn.getAttribute('data-filter');
+
+      rows.forEach(function (row) {
+        var tags = (row.getAttribute('data-tags') || '').split(' ');
+        if (filter === 'all' || tags.indexOf(filter) !== -1) {
+          row.style.display = '';
+          // re-trigger a subtle fade
+          row.style.opacity = '0';
+          requestAnimationFrame(function () {
+            row.style.transition = 'opacity 0.3s ease';
+            row.style.opacity = '1';
+          });
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+})();

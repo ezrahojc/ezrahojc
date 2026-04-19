@@ -1,26 +1,30 @@
-# Ezra Ho Jincheng Portfolio
+# Ezra Ho Jincheng — Academic Portfolio
 
-Static personal portfolio site for GitHub Pages.
+Static multi-page personal site for GitHub Pages, built with an editorial/academic aesthetic.
+
+## Pages
+
+- `index.html` — Home: hero, profile summary, highlights, focus areas
+- `projects.html` — Full project catalogue with topical filtering
+- `achievements.html` — Academic record (Second Class Honours, Upper), leadership roles, coursework emphases
+- `contact.html` — GitHub and LinkedIn correspondence
 
 ## Files
 
-- `index.html` — main page
-- `styles.css` — styling
-- `script.js` — small client-side interactions
+- `index.html`, `projects.html`, `achievements.html`, `contact.html` — the four pages
+- `styles.css` — shared stylesheet
+- `script.js` — mobile nav, footer year, project filtering
 
-## Enable GitHub Pages
+## Design
 
-In the repository settings:
+- Typography: Cormorant Garamond (display) + Newsreader (body) + JetBrains Mono (metadata)
+- Palette: warm paper background, deep ink, oxblood accent
+- All pages share the same header, footer, and visual system
 
-1. Go to **Settings**
-2. Open **Pages**
-3. Under **Build and deployment**, choose **Deploy from a branch**
-4. Select the **main** branch
-5. Select the **/(root)** folder
-6. Save
+## Deploy on GitHub Pages
 
-After deployment, the site should publish on the repository Pages URL.
+1. Go to **Settings → Pages**
+2. Under **Build and deployment**, choose **Deploy from a branch**
+3. Select the **main** branch, **/(root)** folder, and save
 
-## Notes
-
-This site is structured so photography images, a resume, and additional project links can be added later with minimal edits.
+The site publishes at `https://ezrahojc.github.io/ezrahojc/`.

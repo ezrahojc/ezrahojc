@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Ezra Ho Jincheng</title>
+  <meta name="description" content="Selected projects by Ezra Ho Jincheng, spanning information security, applied cryptography, mobile threat simulation, full-stack engineering, and machine learning." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        Ezra Ho <span class="brand-mark">EST. 2024</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">MENU</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Index</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-top">
+      <div class="container">
+        <div class="meta rise rise-1">
+          <span>Volume II</span>
+          <span>Projects</span>
+          <span>Selected Works, 2024 — 2026</span>
+        </div>
+        <h1 class="rise rise-2">Selected <em style="color:var(--accent);font-style:italic;">works</em> &amp; studies.</h1>
+        <p class="lede rise rise-3">
+          A record of academic, engineering, and security-focused builds. Two items are featured; the remainder are catalogued in reverse chronological order with topical tags.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="filter-bar rise rise-1">
+          <span class="filter-label">Filter by topic →</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+          <button class="filter-btn" data-filter="crypto">Cryptography</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="systems">Systems</button>
+        </div>
+
+        <div class="project-list">
+
+          <article class="project-row" data-tags="security mobile web">
+            <div class="num">01</div>
+            <div>
+              <h2 class="project-title">EduConnect <span class="featured-mark">Featured</span></h2>
+              <p class="project-desc">A tutoring marketplace and admin platform with role-based workflows, Firebase messaging, in-chat location sharing, group management, and operational dashboards. Extended with advanced mobile threat simulation work including a Flask C2 dashboard, screen sharing, remote touch replay, and obfuscation pipeline experiments.</p>
+              <div class="project-tags">
+                <span>Flutter</span><span>Firebase</span><span>Flask</span><span>Mobile Security</span><span>Threat Simulation</span>
+              </div>
+            </div>
+            <div class="project-year">2025</div>
+          </article>
+
+          <article class="project-row" data-tags="security crypto">
+            <div class="num">02</div>
+            <div>
+              <h2 class="project-title">EpochTrace <span class="featured-mark">Featured</span></h2>
+              <p class="project-desc">A secure file sharing system for Applied Cryptography featuring TLS transport, version and epoch tracking, integrity verification, access revocation, provenance tracing, and a Textual-based TUI. Includes dashboarding and decoy package injection concepts for leak attribution.</p>
+              <div class="project-tags">
+                <span>Python</span><span>Cryptography</span><span>TLS</span><span>Textual</span><span>Secure Systems</span>
+              </div>
+            </div>
+            <div class="project-year">2025</div>
+          </article>
+
+          <article class="project-row" data-tags="security web">
+            <div class="num">03</div>
+            <div>
+              <h2 class="project-title">JWTGuard — Chrome Extension</h2>
+              <p class="project-desc">A browser extension focused on JWT security analysis to support safer inspection and awareness of token-handling weaknesses during development and testing.</p>
+              <div class="project-tags">
+                <span>JavaScript</span><span>Browser Extension</span><span>JWT</span><span>Web Security</span>
+              </div>
+            </div>
+            <div class="project-year">2025</div>
+          </article>
+
+          <article class="project-row" data-tags="security systems">
+            <div class="num">04</div>
+            <div>
+              <h2 class="project-title">Wi-Fi Security Audit Suite</h2>
+              <p class="project-desc">A compact auditing-oriented build on the ESP32-S3 exploring embedded security testing workflows and wireless security concepts in a hands-on format.</p>
+              <div class="project-tags">
+                <span>ESP32-S3</span><span>Embedded</span><span>Wi-Fi</span><span>Security</span>
+              </div>
+            </div>
+            <div class="project-year">2025</div>
+          </article>
+
+          <article class="project-row" data-tags="web">
+            <div class="num">05</div>
+            <div>
+              <h2 class="project-title">VibeVault</h2>
+              <p class="project-desc">A concert ticketing web application built around modern web development principles, user flow design, and full-stack feature integration.</p>
+              <div class="project-tags">
+                <span>Web App</span><span>Full Stack</span><span>UX</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="security web">
+            <div class="num">06</div>
+            <div>
+              <h2 class="project-title">Secure ASP.NET Web Application</h2>
+              <p class="project-desc">A security-aware web development assignment focused on authentication, input validation, and secure implementation practices within the .NET ecosystem.</p>
+              <div class="project-tags">
+                <span>ASP.NET</span><span>C#</span><span>Secure Coding</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="ml">
+            <div class="num">07</div>
+            <div>
+              <h2 class="project-title">RNN Text Prediction</h2>
+              <p class="project-desc">A deep-learning project exploring recurrent architectures for sequence modelling and text generation, with evaluation on natural-language corpora.</p>
+              <div class="project-tags">
+                <span>Python</span><span>RNN</span><span>Deep Learning</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="ml">
+            <div class="num">08</div>
+            <div>
+              <h2 class="project-title">CNN Food Image Classifier</h2>
+              <p class="project-desc">An image-classification project applying convolutional neural networks to food-recognition tasks, with comparative model evaluation.</p>
+              <div class="project-tags">
+                <span>Python</span><span>CNN</span><span>Computer Vision</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="crypto security">
+            <div class="num">09</div>
+            <div>
+              <h2 class="project-title">ECDH Implementation</h2>
+              <p class="project-desc">A Python implementation project focused on elliptic-curve Diffie-Hellman and the foundational mechanics of cryptographic key exchange.</p>
+              <div class="project-tags">
+                <span>Python</span><span>ECDH</span><span>Applied Cryptography</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="systems">
+            <div class="num">10</div>
+            <div>
+              <h2 class="project-title">RDQ CPU Scheduling Algorithm</h2>
+              <p class="project-desc">A systems-oriented project in C exploring scheduling strategy design and low-level performance thinking, with a focus on correctness under contention.</p>
+              <div class="project-tags">
+                <span>C</span><span>Operating Systems</span><span>Algorithms</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="systems">
+            <div class="num">11</div>
+            <div>
+              <h2 class="project-title">Playlist — Data Structures</h2>
+              <p class="project-desc">A data-structures project focused on efficient organisation, traversal, and manipulation of playlist data, with emphasis on complexity trade-offs.</p>
+              <div class="project-tags">
+                <span>Data Structures</span><span>Algorithms</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+          <article class="project-row" data-tags="security">
+            <div class="num">12</div>
+            <div>
+              <h2 class="project-title">Ethical Hacking Coursework</h2>
+              <p class="project-desc">Hands-on practical work spanning web exploitation, privilege escalation, reconnaissance, and applied lab tooling across Linux and Windows environments.</p>
+              <div class="project-tags">
+                <span>Penetration Testing</span><span>Linux</span><span>Windows</span><span>Web Security</span>
+              </div>
+            </div>
+            <div class="project-year">2024</div>
+          </article>
+
+        </div>
+
+        <p style="margin-top:3rem;font-family:var(--f-mono);font-size:0.8rem;color:var(--muted);letter-spacing:0.08em;">
+          ¶ Further repositories, coursework artefacts, and technical write-ups available on
+          <a href="https://github.com/ezrahojc" target="_blank" rel="noreferrer" style="color:var(--accent);border-bottom:1px solid var(--accent);">github.com/ezrahojc</a>.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <p>© <span id="year"></span> Ezra Ho Jincheng</p>
+      <p class="cite">Set in Cormorant Garamond &amp; Newsreader.</p>
+      <p>Singapore</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

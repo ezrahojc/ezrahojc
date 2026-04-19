@@ -3,243 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ezra Ho Jincheng | Portfolio</title>
-  <meta name="description" content="Portfolio of Ezra Ho Jincheng — Information Security undergraduate, builder, cybersecurity community leader, and photography enthusiast." />
+  <title>Ezra Ho Jincheng — Information Security</title>
+  <meta name="description" content="Academic portfolio of Ezra Ho Jincheng — Information Security undergraduate at the Singapore Institute of Technology. Research, projects, and cybersecurity community work." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home">EH</a>
-      <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#photography">Photography</a>
-        <a href="#contact">Contact</a>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        Ezra Ho <span class="brand-mark">EST. 2024</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">MENU</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="active">Index</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="home">
+  <main>
+
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Information Security • Software Engineering • Penetration Testing</p>
-          <h1>Ezra Ho Jincheng</h1>
-          <p class="hero-copy">
-            Undergraduate in Information &amp; Communications Technology (Hons), majoring in Information Security at the Singapore Institute of Technology. I build secure systems, work across software engineering and cybersecurity, contribute to student tech communities, and enjoy photography as a creative outlet.
+          <p class="eyebrow rise rise-1">Information Security · Singapore Institute of Technology</p>
+          <h1 class="rise rise-2">An undergraduate studying <em>secure systems</em>, applied cryptography, and offensive security.</h1>
+          <p class="hero-copy rise rise-3">
+            I am reading for a B.Eng. (Hons) in Information &amp; Communications Technology, majoring in Information Security, at the Singapore Institute of Technology. My work concerns application security, penetration testing, and the secure design of software — with recent coursework extending into mobile threat simulation and applied cryptography.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-secondary" href="https://github.com/ezrahojc" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ezrahojc" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-          <ul class="quick-facts">
-            <li>Vice President, SIT CYBERH4TS</li>
-            <li>TryHackMe Campus Champion</li>
-            <li>Focus areas: Application Security, Penetration Testing, Secure Development, DevOps, Mobile Security</li>
-          </ul>
-        </div>
-        <div class="hero-card">
-          <div class="avatar">EH</div>
-          <div class="hero-card-content">
-            <h2>Current Focus</h2>
-            <p>Secure software engineering, practical cybersecurity, penetration testing, and portfolio-building projects spanning web, mobile, cryptography, and machine learning.</p>
+          <div class="hero-actions rise rise-4">
+            <a class="btn btn-primary btn-arrow" href="projects.html">View projects</a>
+            <a class="btn btn-secondary" href="achievements.html">Academic record</a>
           </div>
         </div>
+
+        <aside class="specimen rise rise-5">
+          <div class="initials">EH<span style="color:var(--ink);">.</span></div>
+          <h3>Ezra Ho Jincheng</h3>
+          <p style="font-size:0.9rem;color:var(--muted);margin-bottom:0;">Undergraduate Researcher</p>
+          <dl>
+            <dt>Reading</dt><dd>B.Eng. (Hons) ICT — InfoSec</dd>
+            <dt>Institution</dt><dd>SIT, Singapore</dd>
+            <dt>Standing</dt><dd>Second Class Honours (Upper)</dd>
+            <dt>Role</dt><dd>Vice President, SIT CYBERH4TS</dd>
+            <dt>Recognition</dt><dd>TryHackMe Campus Champion</dd>
+          </dl>
+        </aside>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section class="section">
       <div class="container two-col">
-        <div>
-          <p class="section-label">About</p>
-          <h2>Technical profile</h2>
+        <div class="col-label">
+          <p class="section-label">§ 01 — About</p>
+          <h2>Profile</h2>
+          <div class="rule" style="width:40px;height:2px;background:var(--ink);margin-top:1rem;"></div>
         </div>
         <div>
           <p>
-            My work sits at the intersection of software engineering and cybersecurity. I have built secure applications, explored penetration testing workflows, experimented with mobile threat simulation and obfuscation workflows, developed web security tooling, and worked on cryptography-heavy academic systems. I also enjoy translating technical depth into student community leadership through workshops, outreach, and event support.
+            My work sits at the intersection of software engineering and cybersecurity. I have built secure applications across web and mobile, explored penetration testing workflows, written cryptography-heavy academic systems, and contributed to student-led technical communities through workshops and outreach.
           </p>
           <p>
-            Beyond engineering, photography gives me a different lens for detail, composition, and storytelling. That same attention to framing and clarity carries into how I design systems and present technical work.
+            Current interests concentrate on <em>application security</em>, the <em>secure software development lifecycle</em>, and the systems-level thinking needed to reason about real-world threat models. Much of my recent course work has drawn me toward mobile threat simulation and the design of defensible architectures.
+          </p>
+          <p>
+            I approach engineering the way I approach a research problem — by reading carefully, writing deliberately, and treating every system as something to be understood before it is changed.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section alt-bg">
+    <section class="section">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="section-label">Projects</p>
-            <h2>Selected work</h2>
-          </div>
-          <p class="section-intro">A mix of academic, engineering, and security-focused builds.</p>
+          <p class="section-label">§ 02 — Highlights</p>
+          <h2>Recognition &amp; standing</h2>
+          <div class="rule"></div>
         </div>
 
-        <div class="project-grid">
-          <article class="card project-card featured">
-            <span class="badge">Featured</span>
-            <h3>EduConnect</h3>
-            <p>A tutoring marketplace and admin platform with role-based workflows, Firebase messaging, in-chat location sharing, group management, and operational dashboards. Extended with advanced mobile threat simulation work including a Flask C2 dashboard, screen sharing, remote touch replay, and obfuscation pipeline experiments.</p>
-            <div class="tags"><span>Flutter</span><span>Firebase</span><span>Flask</span><span>Mobile Security</span><span>Threat Simulation</span></div>
-          </article>
+        <div class="honours">
+          <div class="grade">
+            2:1
+            <small>Current Standing</small>
+          </div>
+          <div class="honours-copy">
+            <h3>Second Class Honours, Upper Division</h3>
+            <p>Maintained across the Information Security major at the Singapore Institute of Technology — spanning applied cryptography, web and mobile security, secure development, and penetration testing practice.</p>
+          </div>
+        </div>
 
-          <article class="card project-card featured">
-            <span class="badge">Featured</span>
-            <h3>EpochTrace</h3>
-            <p>A secure file sharing system for Applied Cryptography featuring TLS transport, version and epoch tracking, integrity verification, access revocation, provenance tracing, and a Textual-based TUI. Includes dashboarding and decoy package injection concepts for leak attribution.</p>
-            <div class="tags"><span>Python</span><span>Cryptography</span><span>TLS</span><span>Textual</span><span>Secure Systems</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>JWTGuard Chrome Extension</h3>
-            <p>A browser extension focused on JWT security analysis to support safer inspection and awareness of token handling weaknesses during development and testing.</p>
-            <div class="tags"><span>JavaScript</span><span>Browser Extension</span><span>JWT</span><span>Web Security</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>Wi‑Fi Security Audit Suite</h3>
-            <p>A compact auditing-oriented build on ESP32-S3 exploring embedded security testing workflows and wireless security concepts in a hands-on format.</p>
-            <div class="tags"><span>ESP32-S3</span><span>Embedded</span><span>Wi-Fi</span><span>Security</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>VibeVault</h3>
-            <p>A concert ticketing web application built around modern web development principles, user flow design, and full-stack feature integration.</p>
-            <div class="tags"><span>Web App</span><span>Full Stack</span><span>UX</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>Secure ASP.NET Web Application</h3>
-            <p>A security-aware web development assignment focused on authentication, validation, and secure implementation practices in the .NET ecosystem.</p>
-            <div class="tags"><span>ASP.NET</span><span>C#</span><span>Secure Coding</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>RNN Text Prediction</h3>
-            <p>A deep learning project exploring recurrent architectures for sequence modelling and text generation.</p>
-            <div class="tags"><span>Python</span><span>RNN</span><span>Deep Learning</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>CNN Food Image Classifier</h3>
-            <p>An image classification project applying convolutional neural networks to food recognition tasks and model evaluation.</p>
-            <div class="tags"><span>Python</span><span>CNN</span><span>Computer Vision</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>ECDH Implementation</h3>
-            <p>A Python implementation project focused on elliptic-curve Diffie-Hellman and foundational cryptographic exchange mechanics.</p>
-            <div class="tags"><span>Python</span><span>ECDH</span><span>Applied Cryptography</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>RDQ CPU Scheduling Algorithm</h3>
-            <p>A systems-oriented C project exploring scheduling strategy design and low-level performance thinking.</p>
-            <div class="tags"><span>C</span><span>Operating Systems</span><span>Algorithms</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>Playlist Data Structures Project</h3>
-            <p>A data structures project focused on efficient organization, traversal, and manipulation of playlist data.</p>
-            <div class="tags"><span>Data Structures</span><span>Algorithms</span></div>
-          </article>
-
-          <article class="card project-card">
-            <h3>Ethical Hacking Coursework</h3>
-            <p>Hands-on practical work spanning web exploitation, privilege escalation, reconnaissance, and applied lab tooling across Linux and Windows environments.</p>
-            <div class="tags"><span>Penetration Testing</span><span>Linux</span><span>Windows</span><span>Web Security</span></div>
-          </article>
+        <div class="highlights">
+          <div class="highlight-item">
+            <span class="num">i.</span>
+            <h3>Vice President</h3>
+            <p>SIT CYBERH4TS — the student cybersecurity interest group, leading technical events and community outreach.</p>
+          </div>
+          <div class="highlight-item">
+            <span class="num">ii.</span>
+            <h3>Campus Champion</h3>
+            <p>TryHackMe — supporting student engagement and awareness in hands-on cybersecurity learning.</p>
+          </div>
+          <div class="highlight-item">
+            <span class="num">iii.</span>
+            <h3>Second Class Honours (Upper)</h3>
+            <p>Current academic standing in the B.Eng. (Hons) ICT programme, Information Security major.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="achievements" class="section">
+    <section class="section">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="section-label">Achievements</p>
-            <h2>Leadership, involvement, and academic highlights</h2>
-          </div>
+          <p class="section-label">§ 03 — Areas of focus</p>
+          <h2>Research &amp; engineering interests</h2>
+          <div class="rule"></div>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-item card">
-            <h3>Vice President — SIT CYBERH4TS</h3>
-            <p>Student cybersecurity leadership role involving community coordination, outreach, and technical event support.</p>
-          </article>
-          <article class="timeline-item card">
-            <h3>TryHackMe Campus Champion</h3>
-            <p>Community-facing role supporting awareness, participation, and student engagement in cybersecurity learning.</p>
-          </article>
-          <article class="timeline-item card">
-            <h3>Information Security Major — SIT</h3>
-            <p>Academic training spanning applied cryptography, web security, mobile security, machine learning, secure development, systems thinking, and penetration testing practice.</p>
-          </article>
-          <article class="timeline-item card">
-            <h3>Industry and Community Event Involvement</h3>
-            <p>Contributed to cybersecurity-related engagements, student-industry interaction, and discussions around technical communities and conference support.</p>
-          </article>
+        <div class="skills-grid">
+          <div class="skill-block">
+            <h4>Security</h4>
+            <ul>
+              <li>Application security</li>
+              <li>Penetration testing</li>
+              <li>Mobile threat simulation</li>
+              <li>Web security &amp; JWT analysis</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <h4>Cryptography</h4>
+            <ul>
+              <li>TLS &amp; transport security</li>
+              <li>Elliptic-curve exchange (ECDH)</li>
+              <li>Integrity &amp; provenance systems</li>
+              <li>Access revocation models</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <h4>Engineering</h4>
+            <ul>
+              <li>Full-stack web (Flask, ASP.NET)</li>
+              <li>Mobile (Flutter, Firebase)</li>
+              <li>Embedded (ESP32-S3)</li>
+              <li>Systems programming (C)</li>
+            </ul>
+          </div>
+          <div class="skill-block">
+            <h4>Machine Learning</h4>
+            <ul>
+              <li>Recurrent models (RNN)</li>
+              <li>Convolutional networks</li>
+              <li>Sequence modelling</li>
+              <li>Applied classification</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="photography" class="section alt-bg">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">Photography</p>
-            <h2>Beyond code</h2>
-          </div>
-          <p class="section-intro">Photography is one of the ways I slow down, observe detail, and tell stories visually.</p>
-        </div>
-
-        <div class="photo-grid">
-          <div class="photo-card card">
-            <div class="photo-placeholder">Street</div>
-            <h3>Street scenes</h3>
-            <p>Candid moments, movement, contrast, and everyday life.</p>
-          </div>
-          <div class="photo-card card">
-            <div class="photo-placeholder">Architecture</div>
-            <h3>Architecture</h3>
-            <p>Lines, structure, symmetry, and geometric composition.</p>
-          </div>
-          <div class="photo-card card">
-            <div class="photo-placeholder">Events</div>
-            <h3>Event moments</h3>
-            <p>Capturing atmosphere, energy, and the people behind the story.</p>
-          </div>
-        </div>
-
-        <p class="photo-note">This section is structured so real photographs can be dropped in later with minimal edits.</p>
+    <section class="section no-rule">
+      <div class="container" style="text-align:center;">
+        <p class="section-label">§ 04 — Correspondence</p>
+        <h2 style="max-width:700px;margin:0 auto 1.25rem;">For collaboration, research, or introduction.</h2>
+        <p style="max-width:580px;margin:0 auto 2rem;color:var(--muted);">I welcome conversations on internships, research opportunities, and technical problems worth thinking about.</p>
+        <a class="btn btn-primary btn-arrow" href="contact.html">Open correspondence</a>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container contact-card card">
-        <div>
-          <p class="section-label">Contact</p>
-          <h2>Let’s connect</h2>
-          <p>For internships, projects, collaborations, or technical conversations, reach me through GitHub or LinkedIn.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://github.com/ezrahojc" target="_blank" rel="noreferrer">GitHub Profile</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ezrahojc" target="_blank" rel="noreferrer">LinkedIn Profile</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
+    <div class="footer-wrap">
       <p>© <span id="year"></span> Ezra Ho Jincheng</p>
-      <p>Built for GitHub Pages</p>
+      <p class="cite">Set in Cormorant Garamond &amp; Newsreader.</p>
+      <p>Singapore</p>
     </div>
   </footer>
 
