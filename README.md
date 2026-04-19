@@ -40,53 +40,6 @@ Completed certifications and current certification goals.
 ### Contact
 Direct links to my GitHub and LinkedIn for collaboration, internships, and technical conversations.
 
----
-
-## Tech Stack
-
-- **HTML5**
-- **CSS3**
-- **Vanilla JavaScript**
-- **Google Fonts**
-- **GitHub Pages** for deployment
-
-No frameworks, build tools, or external dependencies are required.
-
----
-
-## Design Direction
-
-The visual system is built around:
-
-- warm paper tones with deep ink contrast
-- serif-led typography for an editorial feel
-- mono accents for metadata and technical labels
-- structured, publication-inspired sectioning
-- responsive layouts for desktop and mobile viewing
-
-Typography used:
-
-- **Cormorant Garamond** — display
-- **Newsreader** — body
-- **JetBrains Mono** — metadata
-
----
-
-## Repository Structure
-
-```text
-.
-├── index.html
-├── projects.html
-├── experience.html
-├── achievements.html
-├── certifications.html
-├── contact.html
-├── styles.css
-├── script.js
-└── README.md
-```
-
 ## Contact
 
 - **GitHub:** `https://github.com/ezrahojc`
