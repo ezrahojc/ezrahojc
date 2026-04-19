@@ -1,32 +1,99 @@
-# Ezra Ho Jincheng — Academic Portfolio
+# Ezra Ho Jincheng — Portfolio Website
 
-Static multi-page personal site for GitHub Pages, built with an editorial/academic aesthetic.
+A static personal portfolio site built for GitHub Pages, presenting my work in offensive security, software engineering, and academic projects through a clean editorial-style interface.
 
-## Pages
+**Live site:** `https://ezrahojc.github.io/ezrahojc/`
 
-- `index.html` — Home: hero, profile, standing, focus areas
-- `projects.html` — Full project catalogue with topical filtering
-- `experience.html` — Work, national service, and leadership history
-- `achievements.html` — CTF results, awards, and education
-- `certifications.html` — Certifications (current, completed, and in progress)
-- `contact.html` — GitHub and LinkedIn correspondence
+---
 
-## Files
+## Overview
 
-- `index.html`, `projects.html`, `experience.html`, `achievements.html`, `certifications.html`, `contact.html` — the six pages
-- `styles.css` — shared stylesheet
-- `script.js` — mobile nav, footer year, project filtering
+This repository contains my multi-page personal website. It serves as a central place to showcase:
 
-## Design
+- selected technical projects
+- work and leadership experience
+- certifications and academic background
+- competition results and achievements
+- contact links for professional outreach
 
-- Typography: Cormorant Garamond (display) + Newsreader (body) + JetBrains Mono (metadata)
-- Palette: warm paper background, deep ink, oxblood accent
-- All pages share the same header, footer, and visual system
+The site is designed with a research-journal / editorial aesthetic rather than a generic portfolio layout.
 
-## Deploy on GitHub Pages
+---
 
-1. Go to **Settings → Pages**
-2. Under **Build and deployment**, choose **Deploy from a branch**
-3. Select the **main** branch, **/(root)** folder, and save
+## Website Sections
 
-The site publishes at `https://ezrahojc.github.io/ezrahojc/`.
+### Home
+Introduces my background, current academic focus, technical interests, and selected highlights.
+
+### Projects
+A curated catalogue of security, software, embedded, cryptography, and machine learning work, with filtering by topic.
+
+### Experience
+Professional roles, student appointments, leadership positions, national service, and long-term commitments.
+
+### Achievements
+CTF rankings, awards, academic milestones, and educational history.
+
+### Certifications
+Completed certifications and current certification goals.
+
+### Contact
+Direct links to my GitHub and LinkedIn for collaboration, internships, and technical conversations.
+
+---
+
+## Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **Vanilla JavaScript**
+- **Google Fonts**
+- **GitHub Pages** for deployment
+
+No frameworks, build tools, or external dependencies are required.
+
+---
+
+## Design Direction
+
+The visual system is built around:
+
+- warm paper tones with deep ink contrast
+- serif-led typography for an editorial feel
+- mono accents for metadata and technical labels
+- structured, publication-inspired sectioning
+- responsive layouts for desktop and mobile viewing
+
+Typography used:
+
+- **Cormorant Garamond** — display
+- **Newsreader** — body
+- **JetBrains Mono** — metadata
+
+---
+
+## Repository Structure
+
+```text
+.
+├── index.html
+├── projects.html
+├── experience.html
+├── achievements.html
+├── certifications.html
+├── contact.html
+├── styles.css
+├── script.js
+└── README.md
+```
+
+## Contact
+
+- **GitHub:** `https://github.com/ezrahojc`
+- **LinkedIn:** `https://www.linkedin.com/in/ezrahojc`
+
+---
+
+## License
+
+Portfolio content is personal and project-specific. Code structure may be referenced for inspiration, but written content and personal branding should not be reproduced without permission.
