@@ -620,52 +620,6 @@ main { padding-bottom: 5rem; }
   color: var(--ink);
 }
 
-/* ----- Honours banner ----- */
-.honours {
-  background: var(--ink);
-  color: var(--paper);
-  padding: 2.5rem;
-  position: relative;
-  margin: 0 0 3rem;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 2rem;
-  align-items: center;
-}
-.honours::before, .honours::after {
-  content: "❦";
-  color: var(--accent);
-  font-size: 1.4rem;
-}
-.honours .grade {
-  font-family: var(--f-display);
-  font-size: 3rem;
-  font-style: italic;
-  line-height: 1;
-  color: var(--accent-soft);
-}
-.honours .grade small {
-  display: block;
-  font-family: var(--f-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: var(--paper);
-  text-transform: uppercase;
-  margin-top: 0.4rem;
-  font-style: normal;
-}
-.honours-copy h3 {
-  color: var(--paper);
-  margin-bottom: 0.3rem;
-  font-size: 1.4rem;
-}
-.honours-copy p {
-  margin: 0;
-  color: var(--paper-soft);
-  opacity: 0.85;
-  font-size: 0.95rem;
-}
-
 /* ----- CTF / award cards ----- */
 .award-grid {
   display: grid;
@@ -806,6 +760,33 @@ main { padding-bottom: 5rem; }
   font-style: italic;
   color: var(--muted);
   font-size: 0.85rem;
+}
+.cert-item-media {
+  align-items: flex-start;
+}
+.cert-thumb-link {
+  display: block;
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+.cert-thumb {
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+  background: var(--paper-soft);
+  display: block;
+}
+.cert-thumb.square {
+  height: 96px;
+}
+.cert-link {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+.cert-link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 /* In-progress cert banner */
@@ -954,14 +935,17 @@ main { padding-bottom: 5rem; }
   .project-year { grid-column: 2; }
   .project-title { font-size: 1.3rem; }
 
-  .honours { grid-template-columns: 1fr; text-align: left; padding: 1.8rem; }
-  .honours::before, .honours::after { display: none; }
-  .honours .grade { font-size: 2.4rem; }
-
   .contact-grid, .award-grid, .cert-list { grid-template-columns: 1fr; }
   .contact-card, .award-card, .cert-item {
     border-right: none;
     border-bottom: 1px solid var(--rule);
+  }
+  .cert-thumb {
+    width: 84px;
+    height: 64px;
+  }
+  .cert-thumb.square {
+    height: 84px;
   }
   .contact-card { border-bottom: 1px solid var(--ink); }
   .contact-card:last-child, .cert-list .cert-item:last-child { border-bottom: none; }
