@@ -680,6 +680,11 @@ main { padding-bottom: 5rem; }
 /* Remove trailing right-border on rightmost column */
 .award-grid .award-card:nth-child(2n) { border-right: none; }
 
+
+.competition-results-list {
+  margin-bottom: 2rem;
+}
+
 /* ----- Skills grid ----- */
 .skills-grid {
   display: grid;

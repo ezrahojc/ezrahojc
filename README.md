@@ -32,10 +32,10 @@ A curated catalogue of security, software, embedded, cryptography, and machine l
 Professional roles, student appointments, leadership positions, national service, and long-term commitments.
 
 ### Achievements
-CTF rankings, awards, academic milestones, and educational history.
+CTF rankings, competition results, cyber competition credentials, awards, academic milestones, and educational history.
 
 ### Certifications
-Completed certifications and current certification goals.
+Completed technical certifications and current certification goals.
 
 ### Contact
 Direct links to my GitHub and LinkedIn for collaboration, internships, and technical conversations.
