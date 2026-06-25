@@ -35,7 +35,7 @@ Professional roles, student appointments, leadership positions, national service
 CTF rankings, competition results, cyber competition results, awards, academic milestones, and educational history.
 
 ### Certifications
-Completed technical certifications and current certification goals.
+Completed technical certifications and professional credentials.
 
 ### Contact
 Direct links to my GitHub and LinkedIn for collaboration, internships, and technical conversations.

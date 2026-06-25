@@ -769,6 +769,14 @@ main { padding-bottom: 5rem; }
 .cert-item-media {
   align-items: flex-start;
 }
+
+.cert-item-featured {
+  grid-column: 1 / -1;
+}
+.cert-item-featured .cert-thumb {
+  width: 140px;
+  height: 99px;
+}
 .cert-thumb-link {
   display: block;
   flex: 0 0 auto;
@@ -794,35 +802,7 @@ main { padding-bottom: 5rem; }
   border-bottom-color: var(--ink);
 }
 
-/* In-progress cert banner */
-.in-progress {
-  background: var(--paper-soft);
-  border: 1px solid var(--ink);
-  border-left: 6px solid var(--accent);
-  padding: 1.5rem 1.75rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.in-progress .label {
-  font-family: var(--f-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
-}
-.in-progress h3 {
-  font-family: var(--f-display);
-  font-size: 1.35rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-.in-progress p {
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-  margin: 0;
-  max-width: 760px;
-}
+
 
 /* ----- Contact ----- */
 .contact-grid {
@@ -951,6 +931,10 @@ main { padding-bottom: 5rem; }
   }
   .cert-thumb.square {
     height: 84px;
+  }
+  .cert-item-featured .cert-thumb {
+    width: 96px;
+    height: 72px;
   }
   .contact-card { border-bottom: 1px solid var(--ink); }
   .contact-card:last-child, .cert-list .cert-item:last-child { border-bottom: none; }
